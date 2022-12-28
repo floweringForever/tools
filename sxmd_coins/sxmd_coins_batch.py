@@ -41,7 +41,7 @@ def try_sign():
         time.sleep(3)  # 等待页面加载, 否则会报错找不到元素
         logger.info("签到成功，当前积分：%s", webdriver_obj.find_element("xpath", '//*[@id="extcreditmenu"]').text)
     except Exception as e:
-        logger.info("签到异常，跳过...")
+        logger.error("签到异常，跳过...")
 
 
 def get_coin_sxmd():
